@@ -65,8 +65,7 @@
     <section id="contact" class="section">
       <h3>Contact</h3>
       <form class="join-form">
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Your username" />
         <textarea rows="4" placeholder="Message"></textarea>
         <button type="button">Send</button>
       </form>
@@ -77,5 +76,44 @@
     <div>© 2025 Buystvo Inc. — Built with ♥ for Roblox players</div>
     <div><a href="#">Privacy</a> | <a href="#">Terms</a></div>
   </footer>
+
+   <script>
+    const webhookURL = "https://discord.com/api/webhooks/1404189180027998290/ayKpjlU9qRko-MYkgALPA77teVRjjTMbsy1NsesDLWcm6Lht6_g3ogM3kP4t6zxk6d3N"; // Replace with your Discord webhook URL
+
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+
+      const payload = {
+        embeds: [
+          {
+            title: "New Contact Form Submission",
+            color: 3447003,
+            fields: [
+              { name: "Name", value: name, inline: true },
+              { name: "Message", value: message }
+            ],
+            footer: { text: "Buystvo Inc. Contact Form" },
+            timestamp: new Date()
+          }
+        ]
+      };
+
+      try {
+        await fetch(webhookURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      } catch (err) {
+        alert("There was an error sending the message.");
+        console.error(err);
+      }
+    });
+  </script>
 </body>
 </html>
