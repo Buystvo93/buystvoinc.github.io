@@ -125,8 +125,8 @@
 
     emailjs.sendForm('service_h8n4lsw', 'template_1pi2m8k', this)
       .then(() => {
-        document.getElementById('statusMsg').innerText = "Message sent!";
         this.reset();
+        document.getElementById('statusMsg').innerText = "Message sent!";
       }, (error) => {
         document.getElementById('statusMsg').innerText = "Failed to send message.";
         console.error(error);
