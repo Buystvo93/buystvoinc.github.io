@@ -119,6 +119,19 @@
    (function(){
       emailjs.init("YOUR_USER_ID");
    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        document.getElementById('statusMsg').innerText = "Message sent!";
+        this.reset();
+      }, (error) => {
+        document.getElementById('statusMsg').innerText = "Failed to send message.";
+        console.error(error);
+      });
+  });
 </script>
 
 
