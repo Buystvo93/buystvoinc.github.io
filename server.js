@@ -14,7 +14,7 @@ app.use(express.static("public")); // Serve your index.html
 app.post("/api/contact", async (req, res) => {
     const { name, message } = req.body;
 
-    if (!name || !email || !message) {
+    if (!name || !message) {
         return res.status(400).json({ error: "All fields are required" });
     }
 
