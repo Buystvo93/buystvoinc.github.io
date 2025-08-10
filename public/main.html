@@ -117,13 +117,13 @@
   <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 <script>
    (function(){
-      emailjs.init("YOUR_USER_ID");
+      emailjs.init("jemrS0pUWZuX96evS");
    })();
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_h8n4lsw', 'YOUR_TEMPLATE_ID', this)
+    emailjs.sendForm('service_h8n4lsw', 'template_czxiwzy', this)
       .then(() => {
         document.getElementById('statusMsg').innerText = "Message sent!";
         this.reset();
