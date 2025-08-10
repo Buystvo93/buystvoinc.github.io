@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Buystvo Inc.</title>
   <style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .site-title {
+    margin: 0;
+    font-size: 2rem;
+  }
+
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -80,10 +101,11 @@
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; justify-content: center; gap: 10px; background-color: #007bff; color: white; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
-  <img src="images/logo.png" alt="Buystvo Inc Logo" style="height: 40px; width: auto;" />
-  <h1 style="margin: 0; font-size: 2rem;">Buystvo Inc.</h1>
+  <header class="site-header">
+  <img src="images/logo.png" alt="Buystvo Inc Logo" class="logo" />
+  <h1 class="site-title">Buystvo Inc.</h1>
   </header>
+
 
 
   <nav>
