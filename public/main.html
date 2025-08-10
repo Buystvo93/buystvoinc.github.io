@@ -114,24 +114,15 @@
     &copy; 2025 Buystvo Inc. All Rights Reserved.
   </footer>
 
-  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
-<script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
    (function(){
-      emailjs.init("jemrS0pUWZuX96evS");
-   })();
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm('service_h8n4lsw', 'template_1pi2m8k', this)
-      .then(() => {
-        this.reset();
-        document.getElementById('statusMsg').innerText = "Message sent!";
-      }, (error) => {
-        document.getElementById('statusMsg').innerText = "Failed to send message.";
-        console.error(error);
+      emailjs.init({
+        publicKey: "jemrS0pUWZuX96evS",
       });
-  });
+   })();
 </script>
 
 
