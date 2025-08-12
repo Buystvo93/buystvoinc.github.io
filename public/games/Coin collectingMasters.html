@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Collecting Masters - Buystvo Inc.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 20px;
+    }
+
+    /* Game Profile Page */
+    .game-profile {
+      padding: 20px;
+    }
+
+    .game-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .game-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+    }
+
+    .game-info h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .play-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .play-btn:hover {
+      background: #005ecb;
+    }
+
+    .game-description {
+      margin-top: 20px;
+    }
+
+    .game-gallery {
+      margin-top: 20px;
+    }
+
+    .gallery-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+    }
+
+    .gallery-scroll img {
+      width: 250px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-scroll img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Buystvo Inc. Logo" class="logo" />
+      <h1>Buystvo Inc.</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+    </nav>
+  </header>
+
+  <main class="game-profile">
+    <div class="game-header">
+      <img src="images/CoinCollectingMasters.png" alt="Game Icon" class="game-icon" />
+      <div class="game-info">
+        <h2>Coin Collecting Masters</h2>
+        <p class="tagline">Coming soon...</p>
+        <a href="https://www.roblox.com" target="_blank" class="play-btn">▶ Play Now</a>
+      </div>
+    </div>
+
+    <section class="game-description">
+      <h3>About the Game</h3>
+      <p>
+        About the game ig
+      </p>
+    </section>
+
+    <section class="game-gallery">
+      <h3>Screenshots</h3>
+      <div class="gallery-scroll">
+        <img src="images/screenshot1.png" alt="Screenshot 1" />
+        <img src="images/screenshot2.png" alt="Screenshot 2" />
+        <img src="images/screenshot3.png" alt="Screenshot 3" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Buystvo Inc. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
